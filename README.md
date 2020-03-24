@@ -50,3 +50,47 @@ git reset HEAD <archivo> - saca el fichero del area de revision
 # Ficheros
 .gitignore - fichero para crear una mascara en donde se indican los ficheros que se añaden en un salvado o no
 
+# Comandos para trabajo en remoto 
+git remote add origin <url> - para vincularse con un respositorio (la etiqueta origin se utiliza por convencion para referirse a algo remoto
+  
+git fetch origin - recuperar lo que hay en origen ( en el repositorio anteriormente añadido)
+
+git branch -v -a - Nos dice las ramas disponibles en origin
+
+git pull origin master - nos descargamos el repositorio
+
+git clone <url> - nos inicializa en el directorio donde estamos el repositorio local y clona el repositorio que esta en remoto
+  
+git clone <url> . - es lo mismo que el anterior pero coje los archivos y los copia en el path actual
+  
+git push origin master - con este comando despues de introducir las credenciales del repositorio y lo sube al repositorio remoto
+
+# Comandos de manipulacion de revisiones
+## para recuperar desde el working directory lo que hay en el area de commit 8
+
+git checkou master - para traer de la rama master la revision 
+
+git checkout -- master - para traer el archivo master la revision 
+
+git checkout -- . - para traer un grupo de archivos de la revision 
+
+git checout [HEAD] <fichero> - para traer algo de una revision concreta (si utilizamos HEAD estamos referenciando el hash de la ultima revision)
+
+## para recuperar desde el working directory lo que hay en el area de staging (preparacion)
+
+git reset HEAD <archivo> - para recuperar un archivo que esta en el area de preparacion
+  
+## para recuperar lo que hay en el area de commit pero borrando lo que hay en el area de preparacion
+
+git reset --hard HEAD~1 - este comando recupera el ultimo ante penultimo commit ( HEAD~1 ) y borra lo que hay en el area de preparacion (TENER CUIDADO CON EL )
+
+## Comando para revertir los cambios de una revision
+
+git revert <hashID> - con este comando revertimos los cambios commiteados a una revision con ese hash ID
+  
+git revert HEAD...HEAD~2 --no-edit - revertimos todos los cambios en una franja de revisiones( con el no-edit no se nos pregunta el porque , se revierte y punto )
+
+  
+
+
+
