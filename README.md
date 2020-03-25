@@ -14,7 +14,9 @@ git status - visualizamos el area en el que estan los ficheros
 
 git add <archivo> - añadir los ficheros al area de preparacion
 
-git commit [-m "mensaje de la revision"] - nos permite hacer un commit ( hacer una instantanea del archivo y mandarlo al area de salvado).
+git commit [-m "mensaje de la revision"] - nos permite hacer un commit ( hacer una instantanea del archivo y mandarlo al area de salvado desde el area de preparación).
+
+git commit -a [-m "mensaje de la revision"] - nos permite hacer un commit ( hacer una instantanea del archivo y mandarlo al area de salvado desde el area de trabajo). 
 
 git log --oneline - nos el registro de los guardados en una columna con su identificador ( hash ID )
 
