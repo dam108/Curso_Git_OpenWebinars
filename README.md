@@ -82,7 +82,7 @@ git reset HEAD <archivo> - para recuperar un archivo que esta en el area de prep
   
 ## para recuperar lo que hay en el area de commit pero borrando lo que hay en el area de preparacion
 
-git reset --hard HEAD~1 - este comando recupera el ultimo ante penultimo commit ( HEAD~1 ) y borra lo que hay en el area de preparacion (TENER CUIDADO CON EL )
+git reset --hard HEAD~1 - este comando recupera el antepenultimo commit y borra lo que hay en el area de preparación ( TENER CUIDADO CON EL)
 
 ## Comando para revertir los cambios de una revision
 
